@@ -1,0 +1,78 @@
+body {
+    overflow: hidden;
+}
+
+#left_sector {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    border-radius: 0%;
+    animation: background_text 2s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(6, 247, 251, 0.5);
+  }
+
+  @keyframes background_text {
+    50% {
+      background: rgba(0, 150, 255, 0.5);
+      box-shadow: 0 -14% 70% -12% rgba(50, 200, 255, 0.5) inset,
+                  0 -21% 70% -12% rgba(20, 150, 255, 0.5) inset,
+                  0 -28% 70% -12% rgba(100, 100, 255, 0.5) inset;
+    }
+}
+
+
+#btn_contact {
+    font-size: 20px;
+    animation: background 5s infinite alternate;
+    color: rgb(243, 13, 13);
+  }
+
+  @keyframes background {
+    50% {
+      color: rgb(0, 200, 255);
+      box-shadow: 0 -14% 70% -12% rgb(255, 50, 50) inset,
+                  0 -21% 70% -12% rgb(255, 192, 20) inset,
+                  0 -28% 70% -12% rgba(0, 200, 255, 0.5) inset;
+    }
+}
+
+
+#btn_navigation {
+    font-size: 20px;
+  }
+
+.timeline {
+    border-left: 5px solid #0051ff;
+    border-radius: 6px;
+    position: relative;
+    line-height: 1.5em;
+    max-width: 0%;
+}
+
+.block_avatar {
+    margin-left: 7.5%;
+    margin-top: 2%;
+    color: rgb(175, 175, 175);
+    z-index: 2;
+}
+
+.block_avatar > img {
+    width: 30%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.block_avatar > p {
+    font-size: 150%;
+    color: rgb(255, 255, 255);
+    margin-left: -5%;
+    z-index: 1;
+}
+
+#navbar {
+    margin-top: 50%;
+}
