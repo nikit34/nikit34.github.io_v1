@@ -1,21 +1,25 @@
+body {
+    overflow: hidden;
+}
+
 #left_sector {
     width: 100%;
     position: absolute;
     height: 100%;
     border-radius: 0%;
-    animation: background 2s infinite alternate;
+    animation: background_text 2s infinite alternate;
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgba(6, 247, 251, 0.5);
   }
 
-  @keyframes background {
+  @keyframes background_text {
     50% {
-      background: rgba(0, 200, 255, 0.5);
+      background: rgba(0, 150, 255, 0.5);
       box-shadow: 0 -14% 70% -12% rgba(50, 200, 255, 0.5) inset,
                   0 -21% 70% -12% rgba(20, 150, 255, 0.5) inset,
-                  0 -28% 70% -12% rgba(100, 150, 255, 0.5) inset;
+                  0 -28% 70% -12% rgba(100, 100, 255, 0.5) inset;
     }
 }
 
@@ -51,19 +55,22 @@
 .block_avatar {
     margin-left: 7.5%;
     margin-top: 2%;
+    color: rgb(175, 175, 175);
+    z-index: 2;
 }
 
 .block_avatar > img {
     width: 30%;
     object-fit: cover;
     border-radius: 50%;
+    z-index: 0;
 }
 
 .block_avatar > p {
     font-size: 150%;
-    color: rgb(0, 85, 255);
+    color: rgb(255, 255, 255);
     margin-left: -5%;
-    z-index: 0;
+    z-index: 1;
 }
 
 #navbar {
