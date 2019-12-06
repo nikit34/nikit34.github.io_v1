@@ -1,19 +1,18 @@
-const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
-const animationTime=300;
-const framesCount=20;
-
-anchors.forEach(function(item){
-    item.addEventListener('click', function(e){
-        e.preventDefault();
-        let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
-        let scroller = setInterval(function(){
-            let scrollBy = coordY/framesCount;
-            if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight){
-                window.scrollBy(0, scrollBy);
-            } else {
-                window.scrollTo(0, coordY);
-                clearInterval(scroller);
-            }
-        }, animationTime / framesCount);
-    });
-});
+let links = document.querySelectorAll('[href^="#"]');
+const SPEED = 2.5;
+for (let i = 0; i < links.length; i++) {
+    links[i].onclick = function () {
+        let coord_win_y = window.pageYOffset;
+        let hash = this.href.replace(/[^#]*(.*)/, '$1');
+        coord_regard = document.querySelector(hash).getBoundingClientRect().top, start = null;
+        requestAnimationFrame(step);
+        function step(time) {
+            if (start === null) start = time;
+            let progress = time - start,
+                r = (coord_regard < 0 ? Math.max(coord_win_y - progress / SPEED, coord_win_y + coord_regard) : Math.min(coord_win_y + progress / SPEED, coord_win_y + coord_regard));
+            window.scrollTo(0, r);
+            if (r != coord_win_y + coord_regard) { requestAnimationFrame(step) } else { location.hash = hash }
+        }
+        return false;
+    }
+}
