@@ -22,10 +22,10 @@
     font-size: 20px;
     animation: background 5s infinite alternate;
     color: rgb(243, 13, 13);
-    -webkit-transition: color 1s, font-size 1s;
-    -moz-transition: color 1s, font-size 1s;
-    -o-transition: color 1s, font-size 1s;
-    transition: color 1s, font-size 1s;
+    -webkit-transition: color 1s, font-size 1s, -webkit-transform .1s ease-in-out;
+    -moz-transition: color 1s, font-size 1s, -moz-transform .1s ease-in-out;
+    -o-transition: color 1s, font-size 1s, -o-transform .1s ease-in-out;
+    transition: color 1s, font-size 1s, transform .1s ease-in-out;
 }
 @keyframes background {
     50% {
@@ -39,18 +39,26 @@
 #btn_contact:hover {
   font-size: 160%;
   color: rgb(0, 255, 51);
+  -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 #btn_navigation {
     font-size: 150%;
     color: rgb(0, 34, 255);
-    -webkit-transition: color 1s, font-size 1s;
-    -moz-transition: color 1s, font-size 1s;
-    -o-transition: color 1s, font-size 1s;
-    transition: color 1s, font-size 1s;
+    -webkit-transition: color 1s, font-size 1s, -webkit-transform .8s ease-in-out;
+    -moz-transition: color 1s, font-size 1s, -moz-transform .8s ease-in-out;
+    -o-transition: color 1s, font-size 1s, -o-transform .8s ease-in-out;
+    transition: color 1s, font-size 1s, transform .8s ease-in-out;
 }
 #btn_navigation:hover {
     font-size: 160%;
     color: rgb(0, 0, 116);
+    -webkit-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    -o-transform: rotate(6deg);
+    transform: rotate(6deg);
 }
 #block_avatar {
     font-size: 110%;
