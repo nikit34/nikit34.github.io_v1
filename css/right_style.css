@@ -1,0 +1,7 @@
+#darkness {
+    position: absolute;
+	background: radial-gradient(transparent,rgba(137, 225, 255, 0.5),rgba(255, 255, 255, 0.7));
+	width: 290%;
+    height: 210%;
+    border-radius: 50%;
+}
