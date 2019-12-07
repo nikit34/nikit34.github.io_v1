@@ -1,7 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400i|Roboto:600&display=swap');
+
 #darkness {
     position: absolute;
 	background: radial-gradient(transparent,rgba(137, 225, 255, 0.5),rgba(255, 255, 255, 0.7));
 	width: 290%;
     height: 210%;
     border-radius: 50%;
+}
+
+#right_sector h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+#right_sector h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#right_sector h3 {
+    transition: all .2s ease-in-out;
+    transform: translate3d(20px, 0, 0);
+    opacity: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#right_sector h3.active {
+    transform: translate3d(0px, 0, 0);
+    opacity: 1;
+    font-family: 'Open Sans', sans-serif;
 }

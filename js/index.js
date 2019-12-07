@@ -1,5 +1,4 @@
 window.onload = function(){
-    // your code
 let links = document.querySelectorAll('[href^="#"]');
 const SPEED = 2.5;
 for (let i = 0; i < links.length; i++) {
@@ -20,14 +19,28 @@ for (let i = 0; i < links.length; i++) {
 };
 
 
+
+
+
+
+
+
+
 document.getElementById("container").onmousemove = function(e) {
     obj = document.getElementById("darkness");
     obj.style.top = e.pageY - ($(obj).height() / 2) + "px";
     obj.style.left = e.pageX - ($(obj).width() / 2) - ($(body).width() / 4) + "px";
 };
 
-var isScrolling = false;
 
+
+
+
+
+
+
+
+var isScrolling = false;
     window.addEventListener("scroll", throttleScroll, false);
 
     function throttleScroll(e) {
@@ -39,5 +52,63 @@ var isScrolling = false;
       }
       isScrolling = true;
     }
-    
+
+    document.addEventListener("DOMContentLoaded", scrolling, false);
+
+    var content_text = document.querySelectorAll("#right_sector h3");
+    // var graph_elem = document.querySelector("#graph_elem");
+
+    function scrolling(e) {
+      for (var i = 0; i < content_text.length; i++) {
+        var listItem = content_text[i];
+        if (isPartiallyVisible(listItem)) {
+          listItem.classList.add("active");
+        } else {
+          listItem.classList.remove("active");
+        }
+      }
+    }
+
+    function isPartiallyVisible(el) {
+      var elementBoundary = el.getBoundingClientRect();
+      var top = elementBoundary.top;
+      var bottom = elementBoundary.bottom;
+      var height = elementBoundary.height;
+      return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+    }
+
+
+
+
+
+
+
+
+
+$(window).on("scroll touchmove", function() {
+    if ($(document).scrollTop() > $("#about_").position().top) {
+        $('body').css('background', $("#about_").attr("data-color"))
+    };
+		if ($(document).scrollTop() >= $("#experience_").position().top) {
+				$('body').css('background', $("#experience_").attr("data-color"));
+		};
+		if ($(document).scrollTop() > $("#portfolio_").position().top) {
+				$('body').css('background', $("#portfolio_").attr("data-color"))
+		};
+    if ($(document).scrollTop() > $("#skills_").position().top) {
+      $('body').css('background', $("#skills_").attr("data-color"))
+    };
+    if ($(document).scrollTop() > $("#awards_").position().top) {
+      $('body').css('background', $("#awards_").attr("data-color"))
+    };
+    if ($(document).scrollTop() > $("#contact_").position().top) {
+      $('body').css('background', $("#contact_").attr("data-color"))
+    };
+});
+
+
+
+
+
+
 };
