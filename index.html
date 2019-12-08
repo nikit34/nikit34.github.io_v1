@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow-x: hidden;">
 
 <head>
   <meta charset="UTF-8">
 
   <head>
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/left_style.css">
     <link rel="stylesheet" type="text/css" href="css/right_style.css">
     <link rel="stylesheet" type="text/css"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-grid.css">
     <link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
 </head>
 
@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col">
             <div id="block_avatar">
-              <img src="img/avatar.jpg">
+              <img src="img/avatar.jpg" onmouseover="change_logo_over()" onmouseout="change_logo_out()">
               <p>Full-Stack WebDev</p>
               Python - JavaScript
             </div>
@@ -37,7 +37,7 @@
                   <br /></a>
                 <a href="#awards_"><button class="btn btn-link" id="btn_navigation">Awards</button>
                   <br /></a>
-                <a href="#contact_"><button class="btn btn-link" id="btn_contact">Contact</button>
+                <a href="#contact_" onmouseover="blackout_over()" onmouseout="blackout_out()"><button class="btn btn-link" id="btn_contact">Contact</button>
                   <br /></a>
               </ul>
             </div>
@@ -47,11 +47,21 @@
     </div>
     <div class="col-9">
       <div id="right_sector">
+        <header id="header" onmouseover="change_logo_over()" onmouseout="change_logo_out()">
+          <a class="logo"><img src="img/logo.png"><span>&ensp;&ensp;Nikita Permyakov</span></a>
+          <div id="sector_r">
+            <a href="https://www.linkedin.com/in/nikitapermikov/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/nikit34"><i class="fa fa-github"></i></a>
+            <a href="https://t.me/nikit34"><i class="fa fa-telegram"></i></a>
+            <a class="active" href="https://vk.com/nikitapermikov"><i class="fa fa-vk"></i></a>
+            <a href="https://www.facebook.com/nikitapermikov"><i class="fa fa-facebook"></i></a>
+            <a href="mailto:permikov134@yandax.ru"><i class="fa fa-envelope-square"></i>&ensp;permikov134@yandax.ru</a>
+            <a href="tel:+79779918074"><i class="fa fa-phone"></i></a>
+          </div>
+        </header>
+        <br><br>
         <div class="container" id="container">
           <div id="darkness"></div>
-          <div class="row">
-              <img " src="img/I.jpg">
-          </div>
           <div class="row">
             <h2 style="margin-left: 40%; margin-bottom: 0.5%;" id="about_" data-color="#8E20FB">About myself:</h2>
             <h3>
@@ -89,7 +99,8 @@
               communication<br /><br /></h3>
           </div>
           <div class="row">
-            <h2 style="margin-left: 40%; margin-bottom: 0.5%;" id="experience_" data-color="#2034FB">Experience:</h2>
+            <h2 style="margin-left: 40%; margin-bottom: 0.5%;" id="experience_" data-color="#2034FB">Experience:
+            </h2>
             <h3>
               2018 – now Open source projects, Kaggle and hackathons with Full-dev., solo
               and as a team (see GitHub and Linkedin -> publications)<br /><br />
@@ -106,6 +117,53 @@
             <h2 style="margin-left: 40%; margin-bottom: 0.5%;" id="portfolio_" data-color="#20D0FB">Portfolio:</h2>
             <h3><br /><br />
             </h3>
+            <div class="row">
+              <div id="carousel">
+                <div class="slides">
+                  <div class="numbertext">1 / 5</div>
+                  <img src="img/I.jpg">
+                </div>
+                <div class="slides">
+                  <div class="numbertext">2 / 5</div>
+                  <img src="img/hack.png">
+                </div>
+                <div class="slides">
+                  <div class="numbertext">3 / 5</div>
+                  <img src="img/Mount.jpg">
+                </div>
+                <div class="slides">
+                  <div class="numbertext">4 / 5</div>
+                  <img src="img/Mashuk.jpg">
+                </div>
+                <div class="slides">
+                  <div class="numbertext">5 / 5</div>
+                  <img src="img/Everest.jpg">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="img/I.jpg" onclick="currentSlide(1)" alt="The Woods">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="img/hack.png" onclick="currentSlide(2)" alt="Cinque Terre">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="img/Mount.jpg" onclick="currentSlide(3)" alt="The Woods">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="img/Mashuk.jpg" onclick="currentSlide(4)" alt="Cinque Terre">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="img/Everest.jpg" onclick="currentSlide(5)" alt="The Woods">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="row">
             <h2 style="margin-left: 40%; margin-bottom: 0.5%;" id="skills_" data-color="#20FB27">Skills:</h2>

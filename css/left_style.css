@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400i|Roboto:600|Raleway|Source+Sans+Pro&display=swap');
+
+
 #left_sector {
     height: 100%;
     width: 22%;
@@ -23,10 +26,10 @@
     font-size: 20px;
     animation: background 5s infinite alternate;
     color: rgb(243, 13, 13);
-    -webkit-transition: color 1s, font-size 1s, -webkit-transform .1s ease-in-out;
-    -moz-transition: color 1s, font-size 1s, -moz-transform .1s ease-in-out;
-    -o-transition: color 1s, font-size 1s, -o-transform .1s ease-in-out;
-    transition: color 1s, font-size 1s, transform .1s ease-in-out;
+    -webkit-transition: color 1s, font-size 1s, -webkit-transform 1s ease-in-out;
+    -moz-transition: color 1s, font-size 1s, -moz-transform 1s ease-in-out;
+    -o-transition: color 1s, font-size 1s, -o-transform 1s ease-in-out;
+    transition: color 1s, font-size 1s, transform 1s ease-in-out;
 }
 @keyframes background {
     50% {
@@ -58,12 +61,12 @@
 }
 
 #btn_navigation:hover {
-    font-size: 160%;
+    font-size: 200%;
     color: rgb(0, 0, 116);
-    -webkit-transform: rotate(6deg);
-    -moz-transform: rotate(6deg);
-    -o-transform: rotate(6deg);
-    transform: rotate(6deg);
+    -webkit-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    transform: rotate(-6deg);
 }
 
 
@@ -87,12 +90,6 @@
     -moz-transition: width 1s, filter 1s, opacity 1s;
     -o-transition: width 1s, filter 1s, opacity 1s;
     transition: width 1s, filter 1s, opacity 1s;
-}
-
-#block_avatar > img:hover {
-    width: 55%;
-    opacity: 0.8;
-    filter: hue-rotate(120deg);
 }
 
 #block_avatar > p {
