@@ -30,6 +30,7 @@
     -moz-transition: color 1s, font-size 1s, -moz-transform 1s ease-in-out;
     -o-transition: color 1s, font-size 1s, -o-transform 1s ease-in-out;
     transition: color 1s, font-size 1s, transform 1s ease-in-out;
+    z-index: 11;
 }
 @keyframes background {
     50% {
@@ -48,6 +49,7 @@
   -moz-transform: rotate(360deg);
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
+  z-index: 11;
 }
 
 
@@ -58,6 +60,7 @@
     -moz-transition: color 1s, font-size 1s, -moz-transform .8s ease-in-out;
     -o-transition: color 1s, font-size 1s, -o-transform .8s ease-in-out;
     transition: color 1s, font-size 1s, transform .8s ease-in-out;
+    z-index: 11;
 }
 
 #btn_navigation:hover {
@@ -67,6 +70,7 @@
     -moz-transform: rotate(-6deg);
     -o-transform: rotate(-6deg);
     transform: rotate(-6deg);
+    z-index: 11;
 }
 
 
@@ -77,6 +81,7 @@
     margin-left: 0%;
     text-align: center;
     z-index: 2;
+    z-index: 10;
 }
 
 #block_avatar > img {
@@ -90,6 +95,7 @@
     -moz-transition: width 1s, filter 1s, opacity 1s;
     -o-transition: width 1s, filter 1s, opacity 1s;
     transition: width 1s, filter 1s, opacity 1s;
+    z-index: 11;
 }
 
 #block_avatar > p {
@@ -101,15 +107,18 @@
     -moz-transition: font-size 1s, filter 1s;
     -o-transition: font-size 1s, filter 1s;
     transition: font-size 1s, filter 1s;
+    z-index: 11;
 }
 
 #block_avatar > p:hover {
     font-size: 150%;
     filter: hue-rotate(220deg);
+    z-index: 11;
 }
 
 
 #navbar {
     margin-top: 20%;
     margin-left: 20%;
+    z-index: 10;
 }

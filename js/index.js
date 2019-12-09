@@ -101,10 +101,17 @@ $(window).on("scroll touchmove", function() {
     if ($(document).scrollTop() > $("#awards_").position().top) {
       $('body').css('background', $("#awards_").attr("data-color"))
     };
-    if ($(document).scrollTop() > $("#contact_").position().top) {
-      $('body').css('background', $("#contact_").attr("data-color"))
+    if ($(document).scrollTop() > $("#end_").position().top) {
+      window.scrollTo(0, 0);
     };
 });
+
+
+
+
+
+
+
 
 
 };
@@ -178,11 +185,42 @@ function change_logo_out(){
 
 
 function blackout_over(){
+  window.scrollTo(0, 0);
+
   backness = document.getElementById('darkness')
   backness.style.background = 'linear-gradient(90deg, rgba(9,95,120,1) 30%, rgba(0,5,35,1) 100%)';
+
+  let start = Date.now();
+  var elem = document.getElementById("arrow");
+  elem.style.display = 'block';
+  elem.style.zIndex = '8';
+  var fixLeft = elem.style.left;
+  var fixTop = elem.style.top;
+
+  let timer = setInterval(function() {
+    let timePassed = Date.now() - start;
+    if (timePassed >= 2000){
+      clearInterval(timer);
+      return;
+    }
+    draw(timePassed, elem, fixLeft, fixTop, 1);
+  }, 20);
+  function draw(timePassed, elem, fixLeft, fixTop, i){
+    switch (i){
+      case 1:
+        elem.style.animationTimingFunction = 'ease';
+        elem.style.left = ((timePassed) / 2000) * parseInt(fixLeft) + '%';
+        elem.style.top = ((timePassed ) / 2000) * parseInt(fixTop) + '%';
+    }
+  }
 }
 
 function blackout_out(){
   backness = document.getElementById('darkness')
   backness.style.background = 'radial-gradient(transparent, rgba(137, 225, 255, 0.5),rgba(255, 255, 255, 0.7))';
+  document.getElementById("arrow").style.display = 'none';
+  document.getElementById("arrow").style.left = '0%';
+  document.getElementById("arrow").style.top = '0%';
+  document.getElementById("arrow").style.zIndex = '0';
+  document.getElementById("arrow").style.animationTimingFunction = 'ease';
 }
