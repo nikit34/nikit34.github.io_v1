@@ -26,10 +26,10 @@
     font-size: 20px;
     animation: background 5s infinite alternate;
     color: rgb(243, 13, 13);
-    -webkit-transition: color 1s, font-size 1s, -webkit-transform 1s ease-in-out;
-    -moz-transition: color 1s, font-size 1s, -moz-transform 1s ease-in-out;
-    -o-transition: color 1s, font-size 1s, -o-transform 1s ease-in-out;
-    transition: color 1s, font-size 1s, transform 1s ease-in-out;
+    -webkit-transition: color 1s, font-size 1s, -webkit-transform 0.2s ease-in-out;
+    -moz-transition: color 1s, font-size 1s, -moz-transform 0.2s ease-in-out;
+    -o-transition: color 1s, font-size 1s, -o-transform 0.2s ease-in-out;
+    transition: color 1s, font-size 1s, transform 0.2s ease-in-out;
     z-index: 11;
 }
 @keyframes background {
@@ -43,7 +43,7 @@
 }
 
 #btn_contact:hover {
-  font-size: 160%;
+  font-size: 170%;
   color: rgb(0, 255, 51);
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);

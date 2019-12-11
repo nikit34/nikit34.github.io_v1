@@ -185,42 +185,34 @@ function change_logo_out(){
 
 
 function blackout_over(){
-  window.scrollTo(0, 0);
+  r_backness = document.getElementById('darkness')
+  r_backness.style.background = 'linear-gradient(270deg, rgba(9, 65, 100, 1) 30%, rgba(0, 5, 5, 1) 100%)';
+  l_backness = document.getElementById('left_sector')
+  l_backness.style.background = 'rgba(0, 5, 5, 1)';
+  t_backness = document.getElementById('header')
+  t_backness.style.backgroundColor = '#ffffff09';
+  t_backness_space = document.getElementById('header').querySelector('#header a.logo')
+  t_backness_space.style.marginRight = '2%';
+  t_r_backness = document.getElementById('sector_r').querySelectorAll('#header a')
+  for (let i = 0; i < t_r_backness.length; i++){
+    t_r_backness[i].style.color = 'rgb(0, 255, 255)';
+    t_r_backness[i].style.fontSize = '160%';
 
-  backness = document.getElementById('darkness')
-  backness.style.background = 'linear-gradient(90deg, rgba(9,95,120,1) 30%, rgba(0,5,35,1) 100%)';
-
-  let start = Date.now();
-  var elem = document.getElementById("arrow");
-  elem.style.display = 'block';
-  elem.style.zIndex = '8';
-  var fixLeft = elem.style.left;
-  var fixTop = elem.style.top;
-
-  let timer = setInterval(function() {
-    let timePassed = Date.now() - start;
-    if (timePassed >= 2000){
-      clearInterval(timer);
-      return;
-    }
-    draw(timePassed, elem, fixLeft, fixTop, 1);
-  }, 20);
-  function draw(timePassed, elem, fixLeft, fixTop, i){
-    switch (i){
-      case 1:
-        elem.style.animationTimingFunction = 'ease';
-        elem.style.left = ((timePassed) / 2000) * parseInt(fixLeft) + '%';
-        elem.style.top = ((timePassed ) / 2000) * parseInt(fixTop) + '%';
-    }
   }
 }
 
 function blackout_out(){
-  backness = document.getElementById('darkness')
-  backness.style.background = 'radial-gradient(transparent, rgba(137, 225, 255, 0.5),rgba(255, 255, 255, 0.7))';
-  document.getElementById("arrow").style.display = 'none';
-  document.getElementById("arrow").style.left = '0%';
-  document.getElementById("arrow").style.top = '0%';
-  document.getElementById("arrow").style.zIndex = '0';
-  document.getElementById("arrow").style.animationTimingFunction = 'ease';
+  r_backness = document.getElementById('darkness')
+  r_backness.style.background = 'radial-gradient(transparent, rgba(137, 225, 255, 0.5),rgba(255, 255, 255, 0.7))';
+  l_backness = document.getElementById('left_sector')
+  l_backness.style.background = 'rgba(5, 250, 250, 0.5)';
+  t_backness = document.getElementById('header')
+  t_backness.style.backgroundColor = '#ffffff6d';
+  t_backness_space = document.getElementById('header').querySelector('#header a.logo')
+  t_backness_space.style.marginRight = '5%';
+  t_r_backness = document.getElementById('sector_r').querySelectorAll('#header a')
+  for (let i = 0; i < t_r_backness.length; i++){
+    t_r_backness[i].style.color = 'rgba(0, 0, 0, 0.7)';
+    t_r_backness[i].style.fontSize = '140%';
+  }
 }
