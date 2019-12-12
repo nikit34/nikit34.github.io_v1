@@ -1,48 +1,100 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400i|Permanent+Marker|Lilita+One|Roboto+Slab&display=swap');
 
 #darkness {
-    position: absolute;
-    background: radial-gradient(transparent,rgba(137, 225, 255, 0.5),rgba(255, 255, 255, 0.7));
-	  width: 290%;
-    height: 210%;
-    border-radius: 50%;
-    z-index: 7;
+  position: absolute;
+  background: radial-gradient(transparent,rgba(137, 225, 255, 0.5),rgba(255, 255, 255, 0.7));
+  width: 290%;
+  height: 210%;
+  border-radius: 50%;
+  z-index: 7;
+}
+
+#main_ {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  text-align: center;
+  z-index: 8;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 5px;
+  margin-right: 10%;
+  margin-left: 5%;
+  -webkit-transition: background-color 1s, font-size 1s, -webkit-transform 0.2s ease-in-out;
+    -moz-transition: background-color 1s, font-size 1s, -moz-transform 0.2s ease-in-out;
+    -o-transition: background-color 1s, font-size 1s, -o-transform 0.2s ease-in-out;
+    transition: background-color 1s, font-size 1s, transform 0.2s ease-in-out;
+}
+
+#main_:hover {
+  z-index: 8;
+  font-size: 24px;
+  background-color: rgba(0, 100, 255, 0.2);
+  color: rgb(255, 0, 0);
 }
 
 #right_sector h2 {
-    font-family: 'Source+Sans+Pro', sans-serif;
-    z-index: 5;
+  font-family: 'Lilita One', cursive;
+  z-index: 5;
+  transition: all 0.6s ease-in-out;
+  transform: translate3d(20px, -30px, 10px);
+  margin-left: 40%;
+  margin-top: 2%;
+  margin-right: 40%;
+  margin-bottom: 0.5%;
+  opacity: 0;
 }
 
+#right_sector h2.active {
+  transform: translate3d(0px, 0px, 0px);
+  opacity: 1;
+  z-index: 5;
+  font-family: 'Lilita One', cursive;
+}
 
 #right_sector h3 {
-    transition: all .2s ease-in-out;
-    transform: translate3d(20px, 0, 0);
-    opacity: 0;
-    z-index: 5;
-    font-family: 'Open Sans', sans-serif;
+  transition: all 0.8s ease-in-out;
+  transform: translate3d(20px, 20px, -10px);
+  opacity: 0;
+  z-index: 5;
+  font-family: 'Roboto Slab', serif;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 5px;
+  margin-right: 10%;
 }
 
 #right_sector h3.active {
-    transform: translate3d(0px, 0, 0);
-    opacity: 1;
-    z-index: 5;
-    font-family: 'Open Sans', sans-serif;
+  transform: translate3d(0px, 0px, 0px);
+  opacity: 1;
+  z-index: 5;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
   }
 
-#carousel{
+#carousel {
+  transition: all 0.8s ease-in-out;
+  transform: translate3d(0px, 200px, 0px);
+  position: relative;
+  z-index: 7;
+}
+
+#carousel.active {
+  transform: translate3d(0px, 0px, 0px);
   position: relative;
   z-index: 7;
 }
 
 .slides {
   display: none;
-
   z-index: 5;
 }
 
@@ -53,9 +105,9 @@
 
 .slides img {
   position: absolute;
-  width: 107%;
+  width: 105%;
   height: 400px;
-  margin-left: -3.2%;
+  margin-left: -3.5%;
   z-index: 5;
 }
 
@@ -129,7 +181,7 @@
   height: 100px;
   z-index: 6;
 }
-    
+
 .demo {
   opacity: 0.6;
   z-index: 5;
@@ -138,6 +190,25 @@
 .demo:hover {
   opacity: 1;
   z-index: 5;
+}
+
+#skills_graph img {
+  width: 430px;
+  height: 430px;
+  border-radius: 19px;
+  transition: all 0.8s ease-in-out;
+  transform: translate3d(100px, 150px, -200px);
+  z-index: 11;
+  -webkit-transition: height 0.6s width 0.6s -webkit-transform 0.2s ease-in-out;
+    -moz-transition: height 0.6s width 0.6s -moz-transform 0.2s ease-in-out;
+    -o-transition: height 0.6s width 0.6s -o-transform 0.2s ease-in-out;
+    transition: height 0.6s width 0.6s transform 0.2s ease-in-out;
+}
+
+
+#skills_graph img.active {
+transform: translate3d(0px, 0px, 0px);
+z-index: 11;
 }
 
 #header {
@@ -172,13 +243,12 @@
   font-size: 110% !important;
 }
 
-
 #header a.logo {
   font-size: 175%;
+  font-family: 'Permanent Marker', cursive;
   margin-left: 2%;
   margin-right: 5%;
   color: rgba(0, 89, 109, 0.7);
-  font-family: 'Montserrat', sans-serif;
   z-index: 10;
 }
 
@@ -214,6 +284,15 @@
 }
 
 footer > img {
+  transition: all 0.2s ease-in-out;
+  transform: translate3d(-200px, 10px, 0px);
+  width: 105%;
+  margin-left: -4.75%;
+  z-index: 10;
+}
+
+footer > img.active {
+  transform: translate3d(0px, 0px, 0px);
   width: 105%;
   margin-left: -4.75%;
   z-index: 10;

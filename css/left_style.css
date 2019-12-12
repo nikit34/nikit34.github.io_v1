@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400i|Roboto:600|Raleway|Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cherry+Bomb|Montserrat:900i|Fredoka+One&display=swap');
 
 
 #left_sector {
@@ -24,6 +24,7 @@
 
 #btn_contact {
     font-size: 20px;
+    font-family: 'Fredoka One', cursive;
     animation: background 5s infinite alternate;
     color: rgb(243, 13, 13);
     -webkit-transition: color 1s, font-size 1s, -webkit-transform 0.2s ease-in-out;
@@ -55,6 +56,7 @@
 
 #btn_navigation {
     font-size: 150%;
+    font-family: 'Cherry+Bomb', cursive;
     color: rgb(0, 34, 255);
     -webkit-transition: color 1s, font-size 1s, -webkit-transform .8s ease-in-out;
     -moz-transition: color 1s, font-size 1s, -moz-transform .8s ease-in-out;
@@ -75,7 +77,8 @@
 
 
 #block_avatar {
-    font-size: 110%;
+    font-size: 90%;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 2%;
     color: rgb(253, 253, 253);
     margin-left: 0%;
@@ -118,7 +121,7 @@
 
 
 #navbar {
-    margin-top: 20%;
+    margin-top: 10%;
     margin-left: 20%;
     z-index: 10;
 }
